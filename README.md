@@ -4,8 +4,8 @@
 
 1. Muhammad Fathi Farhat (2567071001)
 2. Shendi Adha filian (2507071018)
-3. Farsha keysan ariyadi ()
-4. Zelka Ariando ()
+3. Farsha keysan ariyadi (2507071016)
+4. Zelka Ariando (2517051075)
 
 ---
 Mata Kuliah: Peer grup
