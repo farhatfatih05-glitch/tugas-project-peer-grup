@@ -1,137 +1,119 @@
-<!doctype html>
-<html lang="id">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Dokumentasi Project: Aplikasi Kasir Mini (C++)</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9fafb;
-      color: #111827;
-      line-height: 1.7;
-    }
-    header {
-      background: linear-gradient(135deg, #0ea5e9, #2563eb);
-      color: white;
-      padding: 30px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-    header p {
-      margin: 8px 0 0;
-      font-size: 16px;
-      opacity: 0.9;
-    }
-    main {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-    section {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    }
-    h2 {
-      color: #1d4ed8;
-      margin-top: 0;
-    }
-    ul, ol {
-      margin-left: 20px;
-    }
-    pre {
-      background: #1e293b;
-      color: #f8fafc;
-      padding: 15px;
-      border-radius: 8px;
-      overflow-x: auto;
-    }
-    code {
-      font-family: Consolas, monospace;
-      font-size: 14px;
-    }
-    .example {
-      background: #fef9c3;
-      border-left: 5px solid #f59e0b;
-      padding: 15px;
-      border-radius: 6px;
-    }
-    footer {
-      text-align: center;
-      font-size: 14px;
-      color: #6b7280;
-      padding: 15px;
-      background: #f3f4f6;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Aplikasi Kasir Mini (C++)</h1>
-    <p>Dokumentasi Project Tugas Pemrograman — Looping & Function</p>
-  </header>
-  
-  <main>
-    <section>
-      <h2>Latar Belakang</h2>
-      <p>Konsep <strong>looping</strong> dan <strong>fungsi</strong> merupakan dasar penting dalam pemrograman. Untuk melatih penerapan konsep tersebut, dibuatlah sebuah aplikasi kasir sederhana yang mampu menghitung subtotal, diskon, pajak, total, dan kembalian dari transaksi pembelian.</p>
-    </section>
+# 📌 Kasir Mini Project
 
-    <section>
-      <h2>Fungsi Program</h2>
-      <ul>
-        <li>Input data barang: nama, harga, dan jumlah.</li>
-        <li>Menampilkan daftar belanja dan subtotal per item.</li>
-        <li>Menghitung subtotal keseluruhan, diskon, pajak, dan total bayar.</li>
-        <li>Menerima pembayaran serta menampilkan kembalian.</li>
-      </ul>
-    </section>
+📌 Daftar Anggota Kelompok 
 
-    <section>
-      <h2>Kode Program (C++)</h2>
-      <pre><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
-using namespace std;
+1. Muhammad Fathi Farhat (2567071001)
+2. Shendi Adha filian (2507071018)
+3. Farsha keysan ariyadi ()
+4. Zelka Ariando ()
 
-const float PAJAK = 0.1;
+---
+Mata Kuliah: Peer grup
 
-float hitungTotal(float harga[], int qty[], int n) {
-    float subtotal = 0;
-    for (int i = 0; i &lt; n; i++) subtotal += harga[i] * qty[i];
-    float diskon = 0;
-    if (subtotal &gt;= 500000) diskon = 0.1 * subtotal;
-    else if (subtotal &gt;= 200000) diskon = 0.05 * subtotal;
-    float setelahDiskon = subtotal - diskon;
-    return setelahDiskon + (setelahDiskon * PAJAK);
-}
+## 📖 Latar Belakang
 
-int main() {
-    string nama[50]; float harga[50]; int qty[50]; int n;
-    cout &lt;&lt; "Masukkan jumlah item: "; cin &gt;&gt; n;
-    for (int i=0;i&lt;n;i++){
-        cout &lt;&lt; "Item " &lt;&lt; i+1 &lt;&lt; " Nama: "; cin &gt;&gt; nama[i];
-        cout &lt;&lt; "Harga: "; cin &gt;&gt; harga[i];
-        cout &lt;&lt; "Jumlah: "; cin &gt;&gt; qty[i];
-    }
-    float subtotal=0;
-    for(int i=0;i&lt;n;i++) subtotal+=harga[i]*qty[i];
-    float total=hitungTotal(harga,qty,n);
-    cout &lt;&lt; "Subtotal: Rp" &lt;&lt; subtotal &lt;&lt; "\nTotal Bayar: Rp" &lt;&lt; total;
-}
-</code></pre>
-    </section>
+Dalam kehidupan sehari-hari, proses transaksi jual beli sering kali membutuhkan perhitungan yang cepat dan akurat. Program kasir ini dibuat menggunakan bahasa pemrograman **C++** untuk membantu menghitung total belanja, diskon, pajak, dan kembalian secara otomatis. Dengan demikian, program sederhana ini dapat mensimulasikan cara kerja kasir pada toko atau minimarket.
 
-    <section>
-      <h2>Langkah-langkah Pembuatan</h2>
-      <ol>
-        <li>Rancang input: nama, harga, jumlah barang.</li>
-        <li>Buat array untuk menyimpan data.</li>
-        <li>Buat fungsi <code>hitungTotal()</code> untuk men
+---
+
+## 🎯 Kegunaan Project
+
+* Membantu pengguna menghitung total belanja.
+* Memberikan simulasi pemberian diskon otomatis.
+* Menambahkan pajak 10% setelah diskon.
+* Menampilkan subtotal, total bayar, dan kembalian.
+
+---
+
+## 🔄 Alur Project
+
+1. Pengguna memasukkan jumlah item yang dibeli.
+2. Pengguna menginput nama barang, harga, dan jumlah setiap item.
+3. Program menghitung subtotal dari semua barang.
+4. Program mengecek apakah subtotal mendapat diskon.
+5. Setelah diskon, pajak 10% ditambahkan.
+6. Program menampilkan daftar belanja, subtotal, total bayar, dan kembalian.
+
+---
+
+## ⚙️ Algoritma Program
+
+1. **Deklarasi variabel** untuk menyimpan nama barang, harga, jumlah, serta konstanta pajak.
+2. **Input data** jumlah item, lalu detail tiap barang dengan loop `for`.
+3. **Hitung subtotal**: jumlahkan harga × qty untuk setiap barang.
+4. **Cek diskon**:
+
+   * Subtotal ≥ 500.000 → diskon 10%
+   * Subtotal ≥ 200.000 → diskon 5%
+5. **Tambahkan pajak 10%** setelah diskon.
+6. **Output** hasil perhitungan: subtotal, total bayar, dan kembalian.
+
+---
+
+## 🖼️ Flowchart
+
+```mermaid
+flowchart TD
+    A[Mulai] --> B[Input jumlah item]
+    B --> C[Loop input nama, harga, qty barang]
+    C --> D[Hitung subtotal]
+    D --> E{Subtotal >= 500k?}
+    E -->|Ya| F[Diskon 10%]
+    E -->|Tidak| G{Subtotal >= 200k?}
+    G -->|Ya| H[Diskon 5%]
+    G -->|Tidak| I[Tanpa diskon]
+    F --> J[Hitung pajak 10%]
+    H --> J
+    I --> J
+    J --> K[Tampilkan daftar belanja & total bayar]
+    K --> L[Input uang bayar]
+    L --> M[Hitung kembalian]
+    M --> N[Selesai]
+```
+
+---
+
+## ✨ Fitur Utama
+
+* Input barang dinamis (hingga 50 item).
+* Perhitungan otomatis subtotal, diskon, pajak, dan kembalian.
+* Diskon berdasarkan nominal belanja.
+* Output daftar belanja lengkap.
+
+---
+
+## 🖥️ Simulasi Penggunaan
+
+### Input:
+
+```
+Masukkan jumlah item: 2
+
+Item ke-1
+Nama barang  : Buku
+Harga barang : 20000
+Jumlah       : 2
+
+Item ke-2
+Nama barang  : Pensil
+Harga barang : 5000
+Jumlah       : 5
+```
+
+### Output:
+
+```
+===== DAFTAR BELANJA =====
+Buku x2 = Rp40000
+Pensil x5 = Rp25000
+
+Subtotal : Rp65000
+Total Bayar (setelah diskon & pajak): Rp71500
+Uang dibayarkan: Rp100000
+Kembalian      : Rp28500
+
+Terima kasih telah berbelanja!
+```
+
+---
+
